@@ -10,8 +10,9 @@ applications:
     - sap_java_buildpack
   env:
     TARGET_RUNTIME: tomee7
-    SET_LOGGING_LEVEL: '{ROOT: INFO, com.sap.cloud.sdk: INFO,com.sap.ich: DEBUG}'
-    JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:128m..'
+    SET_LOGGING_LEVEL: '{ROOT: INFO, com.sap.cloud.sdk: INFO, com.sap.ich.poc: DEBUG}'
+    JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:512m..'
+#   JBP_CONFIG_RESOURCE_CONFIGURATION: "['tomee7/webapps/ROOT/WEB-INF/resources.xml': {'service_name_for_DefaultDB' : 'my-local-special-di-core-hdi'}]"
 #  services:
 #  - my-application-logs
 #  - my-xsuaa
