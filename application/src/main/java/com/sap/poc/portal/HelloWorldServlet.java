@@ -2,7 +2,6 @@ package com.sap.poc.portal;
 
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Map;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -31,30 +30,26 @@ public class HelloWorldServlet extends HttpServlet {
 		 */
 		response.getWriter().write("Hello World!");
 		response.getWriter().write("\r\n\n");
-		
 
 		/*
 		 * Map<String, String> env = System.getenv(); for (String envName :
 		 * env.keySet()) { response.getWriter().write(String.format( "%s=%s%n", envName,
 		 * env.get(envName))); }
 		 */
-		
-//		HDIQueryTests test=new HDIQueryTests(response);
-		HanaDbUseClass hanadb=new HanaDbUseClass();
-		
+
+		/*
+		 * // HDIQueryTests test=new HDIQueryTests(response); HanaDbUseClass hanadb=new
+		 * HanaDbUseClass();
+		 */
 		try {
-			response.getWriter().write("id :"+hanadb.getCountForId(response));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			logger.error("io exc :",e);
+			response.getWriter().write("id :" + hanaDB.getCountForId(response));
+		} catch (IOException e) { // TODO Auto-generated catch block
+			logger.error("io exc :", e);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			logger.error("sql exc:",e);
+			logger.error("sql exc:", e);
 		}
-		
-		
-		
+
 	}
-	
 
 }

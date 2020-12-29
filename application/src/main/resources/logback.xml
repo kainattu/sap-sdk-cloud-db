@@ -10,7 +10,7 @@
 		</encoder>
 	</appender>
 
-	<logger name="com.sap.ich.poc" level="DEBUG" additivity="false">
+	<logger name="com.sap.poc.portal" level="DEBUG" additivity="false">
 		<appender-ref ref="STDOUT" />
 	</logger>
 
